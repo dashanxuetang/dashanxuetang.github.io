@@ -1,9 +1,11 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <h1>搭讪学堂</h1>
-    <h1>www.dashanxuetang.com</h1>
-  </body>
-</html>
+---
+layout: default
+title: codetyphon
+---
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li><span>{{post.date | date_to_string }}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+</ul>
